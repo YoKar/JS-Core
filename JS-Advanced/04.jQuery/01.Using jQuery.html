@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Using jQuery</title>
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>This is a <a href="https://softuni.bg/trainings/1486/js-advanced-october-2016">Link</a> </p>.
+<ul><li>one</li><li>two</li><li>tree</li></ul>
+<script>
+    $(document).ready(function() {
+        $("body *").click(function(event) {
+            $(this).fadeOut();
+            $(document.body).append(
+                "Removed: " + this + "<br>\n");
+            event.preventDefault();
+            event.stopPropagation();
+        });
+    });
+
+</script>
+</body>
+</html>
