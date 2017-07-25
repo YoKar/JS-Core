@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Colorize Table</title>
 </head>
 <body>
-<table border ='1'>
+<table border="1">
     <tr><th>Name</th><th>Town</th></tr>
     <tr><td>Eve</td><td>Sofia</td></tr>
     <tr><td>Nick</td><td>Varna</td></tr>
     <tr><td>Didi</td><td>Ruse</td></tr>
     <tr><td>Tedy</td><td>Varna</td></tr>
-
 </table>
 <button onclick="colorize()">Colorize</button>
 <script>
     function colorize() {
-        let rows = document.querySelectorAll('table tr');
-        for(let i=1;i<rows.length;i+=2){
-            rows[i].style.backgroundColor=('teal');
+        let tRows = document.querySelectorAll('table tr');
+        console.log(tRows.length);
+        for(let i=1;i<tRows.length;i+=2){
+            tRows[i].style.background="teal";
         }
+
 
     }
 </script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Collect List Items</title>
 </head>
 <body>
 <ul id="items">
@@ -15,12 +15,12 @@
 <button onclick="extractText()">Extract Text</button>
 <script>
     function extractText() {
-        let area = document.getElementById('result');
-        area.value="";
-        let ul=document.getElementById('items');
-        let lis = ul.children;
-        for(let i=0;i<lis.length;i++){
-            area.value+=lis[i].textContent+'\n';
+        let items = document.getElementById('items');
+        console.log(items.children);
+        let area=document.getElementById('result');
+        area.value='';
+        for(let i =0;i<items.children.length;i++){
+            area.value+=items.children[i].textContent+'\n';
         }
     }
 </script>

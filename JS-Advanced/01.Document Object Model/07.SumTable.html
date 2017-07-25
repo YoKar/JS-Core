@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sum Table</title>
 </head>
 <body>
-<table border="2">
+<table border="1">
     <tbody>
     <tr><th>Product</th><th>Cost</th></tr>
     <tr><td>Beer</td>   <td>2.88</td></tr>
@@ -16,15 +16,15 @@
 </table>
 <button onclick="sum()">Sum</button>
 <script>
-    function sum() {
-        let rows = document.querySelectorAll('table tr');
-        let sum=0;
-        for(let i =1;i<rows.length;i++){
-            let cols = rows[i].children;
-            sum+=Number(cols[cols.length-1].textContent);
+    function sum () {
+        let td = document.querySelectorAll('table tr td');
+        let sum =0;
+        for(let i =1;i<td.length;i+=2){
+            sum+=Number(td[i].textContent);
+
         }
-       document.getElementById('sum').textContent=sum;
+        document.getElementById('sum').textContent=sum;
     }
-</script>>
+</script>
 </body>
 </html>
